@@ -7,7 +7,12 @@ import Discover from '../pages/discover/discover'
 import User from '../pages/user/user'
 import Login from '../pages/user/login'
 import Info from '../pages/user/info'
-import Raiders from '../pages/discover/raiders'
+import ArticleList from '../pages/discover/articlelist'
+import ArticleSameList from '../pages/discover/articlesame'
+import ArticleDetail from '../pages/discover/detail'
+import Orders from '../pages/user/orders'
+import FoodDetail from '../pages/food/detail'
+
 Vue.use(Router)
 
 export default new Router({
@@ -28,13 +33,22 @@ export default new Router({
       component: Recommend
     },
     {
-      path: '/discover',
+      path: '/discover/',
       name: 'discover',
+      redirect: '/discover/list',
       component: Discover,
       children: [
         {
-          path: 'raiders',
-          component: Raiders
+          path: 'list',
+          component: ArticleList
+        },
+        {
+          path: 'detail',
+          component: ArticleDetail
+        },
+        {
+          path: 'samelist',
+          component: ArticleSameList
         }
       ]
     },
@@ -51,8 +65,16 @@ export default new Router({
         {
           path: 'info',
           component: Info
+        },
+        {
+          path: 'orders',
+          component: Orders
         }
       ]
+    },
+    {
+      path: '/food/detail',
+      component: FoodDetail
     }
   ]
 })

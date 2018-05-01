@@ -34,7 +34,7 @@
       <ul>
         <li class="item" v-for="item in foodList" :key="item.id">
           <div class="left-wrapper">
-            <router-link to="/"><img :src="item.image"  :alt="item.title"></router-link>
+            <router-link :to="{path: '/food/detail', query: {id: item.id}}"><img :src="item.image"  :alt="item.title"></router-link>
           </div>
           <div class="right-wrapper">
             <div class="title">{{ item.title }}</div>
@@ -49,6 +49,7 @@
         </li>
       </ul>
     </div>
+    <bottom-nav></bottom-nav>
   </div>
 </template>
 

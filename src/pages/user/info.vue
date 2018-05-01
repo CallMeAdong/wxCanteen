@@ -19,7 +19,7 @@
       </div>
       <div class="content">
         <div class="item">
-          <router-link to="/">
+          <router-link to="/user/orders">
             <div class="title">我的订单</div>
             <div class="item-icon"><Icon type="chevron-right"></Icon></div>
           </router-link>

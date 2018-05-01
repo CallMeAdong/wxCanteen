@@ -60,6 +60,7 @@
           </div>
       </div>
     </div>
+    <bottom-nav></bottom-nav>
   </div>
 </template>
 

@@ -1,7 +1,5 @@
 <template>
-  <div id="app">
-    <div style="margin-bottom: 60px;"><router-view></router-view></div>
-    <!-- <div class="bottom-menu">
+    <div class="bottom-menu">
       <div class="menu">
         <div class="menu-item">
           <router-link to="/index">
@@ -28,18 +26,17 @@
           </router-link>
         </div>
       </div>
-    </div> -->
-  </div>
+    </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'bottom-nav'
 }
 </script>
 
 <style>
-/* @import "assets/icon/iconfont.css";
+@import "../assets/icon/iconfont.css";
 
 .bottom-menu {
   position: fixed;
@@ -61,5 +58,5 @@ export default {
 }
 .bottom-menu .menu .menu-item a.router-link-active {
   color: #19be6b;
-} */
+}
 </style>

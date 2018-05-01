@@ -19,7 +19,7 @@ export default {
   },
   methods: {
     getRaidersList: function () {
-      axios.get('/discover/raiders/').then((res) => {
+      axios.get('/discover/article/list').then((res) => {
         this.raidersList = res.data.result
       })
     }

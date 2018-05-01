@@ -13,7 +13,7 @@
 
       <div class="content" v-on:click="getDetail(item)">
         <div class="text">
-          <p>{{ item.content }}</p>
+          <p><span style="color: #2d8cf0;" v-on:click.stop="getArticleCategory(item.post_type)">#{{ item.post_type }}# </span>{{ item.summary }}</p>
         </div>
         <div class="image">
           <ul class="content-img-wrapper">
@@ -44,7 +44,10 @@ export default {
   },
   methods: {
     getDetail: function (data) {
-      console.log(data)
+      this.$router.push({path: '/discover/detail', query: {id: data.id}})
+    },
+    getArticleCategory: function (data) {
+      this.$router.push({path: '/discover/samelist/', query: {type: data}})
     }
   }
 }
