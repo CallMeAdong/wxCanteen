@@ -38,7 +38,7 @@
           </router-link>
         </div>
         <div class="item">
-          <router-link to="/">
+          <router-link to="/user/change-pwd">
             <div class="title">登陆密码</div>
             <div class="item-icon"><span>修改 </span><Icon type="chevron-right"></Icon></div>
           </router-link>

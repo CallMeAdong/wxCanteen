@@ -12,6 +12,7 @@ import ArticleSameList from '../pages/discover/articlesame'
 import ArticleDetail from '../pages/discover/detail'
 import Orders from '../pages/user/orders'
 import FoodDetail from '../pages/food/detail'
+import ChangeaPwd from '../pages/user/change-password'
 
 Vue.use(Router)
 
@@ -69,6 +70,10 @@ export default new Router({
         {
           path: 'orders',
           component: Orders
+        },
+        {
+          path: 'change-pwd',
+          component: ChangeaPwd
         }
       ]
     },
